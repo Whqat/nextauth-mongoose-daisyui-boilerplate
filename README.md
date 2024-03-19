@@ -1,12 +1,13 @@
+# NOTE: THIS REPOSITORY IS AN EXTENSION OF THE REPOSTIORY AT https://github.com/MenvielleValen/nextjs-auth-template
 # Next.js 14 - Authentication Template with NextAuth.js and MongoDB
 
-This project is an authentication template for Next.js applications, utilizing NextAuth.js for authentication and MongoDB for database storage. It comes with pre-configured support for email, GitHub, Google, and GitLab authentication providers.
+This project is an authentication template for Next.js applications, utilizing NextAuth.js for authentication and MongoDB for database storage. It comes with pre-configured support for email, GitHub, Google, and Facebook authentication providers.
 
 ## Features
 
 - Complete authentication setup with NextAuth.js
-- Authentication providers: Email, GitHub, Google, GitLab
-- MongoDB integration for storing sessions and users
+- Authentication providers: GitHub, Google, Facebook
+- MongoDB with Mongoose integration for storing sessions and users
 - Examples of route protection and authentication-based redirection
 - Easy to customize and extend
 - Tailwind CSS
@@ -22,71 +23,11 @@ Before you begin, make sure you have installed:
 ## Setup
 
 1. Clone the repository:
-
-```bash
-git clone https://github.com/MenvielleValen/nextjs-auth-template.git
-cd your-project-directory
-
-```
-
 2. Install dependencies
-
-
-npm:
-```bash
-npm install
-
-```
-
-yarn:
-```bash
-yarn install
-
-```
 
 # Environment Configuration
 
-Before running the application, you'll need to create credentials with the authentication providers you intend to use and configure them in your environment variables.
-
-- For <b>Google, GitHub, and GitLab</b> authentication, visit their respective platforms to create OAuth applications and obtain your client ID and secret keys: 
-    - GOOGLE: [Google Developers Console](https://console.cloud.google.com)
-    - GITHUB: [Creating a Github App](https://github.com/settings/apps)
-    - GITLAB: [Creating a GitLab App](https://gitlab.com/-/user_settings/applications)
-    
-
-- For <b>Email</b> authentication and sending emails, you can use services like Resend for SMTP settings:
-    - RESEND: [Create API keys on Resend](https://resend.com/api-keys)
-
-
-Configure your .env.local file with the obtained credentials:
-```bash
-# MongoDB URL
-MONGODB_URL=mongodb://127.0.0.1 (connection string without db name)
-DB_NAME=auth
-
-# NextAuth Prod
-NEXTAUTH_SECRET=your-custom-secret-for-nextauth
-
-# GitHub OAuth
-GITHUB_ID=your-github-id
-GITHUB_SECRET=your-github-secret
-
-# Google OAuth
-GOOGLE_CLIENT_ID=your-google-client-id
-GOOGLE_CLIENT_SECRET=your-google-client-secret
-
-# Resend Email SMTP
-EMAIL_SERVER_USER=resend
-EMAIL_SERVER_PASSWORD=your-resend-api-key
-EMAIL_SERVER_HOST=smtp.resend.com
-EMAIL_SERVER_PORT=465
-EMAIL_FROM=onboarding@resend.dev
-
-# GitLab OAuth
-GITLAB_CLIENT_ID=your-gitlab-client-id
-GITLAB_CLIENT_SECRET=your-gitlab-client-secret
-
-```
+Configure your .env.local
 
 ## Project Configuration
 
